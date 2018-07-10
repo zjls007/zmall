@@ -1,0 +1,11 @@
+#app
+server:
+    port: 8081
+
+dubbo:
+  application:
+    id: user-rpc-consumer
+    name: user-rpc-consumer
+  registry:
+    id: zookeeper
+    address: zookeeper://172.16.1.109:2181

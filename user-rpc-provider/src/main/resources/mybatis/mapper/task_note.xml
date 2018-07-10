@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxj.dao.TaskNoteDAO">
+
+    <resultMap id="BaseResultMap" type="com.zxj.entity.TaskNote">
+        <id column="id" property="id" />
+        <id column="task_id" property="taskId" />
+        <id column="date" property="date" />
+        <id column="remark" property="remark" />
+        <id column="operate_user_id" property="operateUserId" />
+        <id column="create_time" property="createTime" />
+    </resultMap>
+
+    <resultMap id="BaseResultMapAS" type="com.zxj.entity.TaskNote">
+        <id column="tn_id" property="id" />
+        <id column="tn_task_id" property="taskId" />
+        <id column="tn_date" property="date" />
+        <id column="tn_remark" property="remark" />
+        <id column="tn_operate_user_id" property="operateUserId" />
+        <id column="tn_create_time" property="createTime" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, task_id, date, remark, operate_user_id, create_time
+    </sql>
+
+    <sql id="Base_Alias_Column_List">
+        tn.id, tn.task_id, tn.date, tn.remark, tn.operate_user_id, tn.create_time
+    </sql>
+
+    <sql id="Base_Alias_Column_List_AS">
+        tn.id AS tn_id, tn.task_id AS tn_task_id, tn.date AS tn_date, tn.remark AS tn_remark, tn.operate_user_id AS tn_operate_user_id, tn.create_time AS tn_create_time
+    </sql>
+
+</mapper>
+
