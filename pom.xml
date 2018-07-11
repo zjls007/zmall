@@ -18,6 +18,7 @@
         <module>shiro</module>
         <module>spring-web-mvc</module>
         <module>spring-boot-jpa</module>
+        <module>rabbitMQ</module>
     </modules>
 
     <properties>
