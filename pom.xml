@@ -19,6 +19,7 @@
         <module>spring-web-mvc</module>
         <module>spring-boot-jpa</module>
         <module>rabbitMQ</module>
+        <module>sale-kill</module>
     </modules>
 
     <properties>
