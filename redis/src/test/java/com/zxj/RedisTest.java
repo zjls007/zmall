@@ -10,6 +10,7 @@ import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -119,4 +120,49 @@ public class RedisTest {
         return false;
     }
 
+    /**
+     * set add
+     */
+    @Test
+    public void sadd() {
+        redisTemplate.opsForSet().add("set", "a", "b", "c", "d");
+    }
+
+    @Test
+    public void smembers() {
+        Set<String> set = redisTemplate.opsForSet().members("set");
+        System.out.println(set);
+    }
+
+    @Test
+    public void isMember() {
+        System.out.println(redisTemplate.opsForSet().isMember("set", "e"));
+    }
+
+    @Test
+    public void remove() {
+        System.out.println(redisTemplate.opsForSet().remove("set", "a"));
+    }
+
+    @Test
+    public void z() {
+        // 排行榜，前3名
+        redisTemplate.opsForZSet().add("zset", "a", 1d);
+        redisTemplate.opsForZSet().add("zset", "d", 2d);
+        redisTemplate.opsForZSet().add("zset", "c", 3d);
+    }
+
+    @Test
+    public void range() {
+        // 0为开始，-1为结束
+        Set<String> zset = redisTemplate.opsForZSet().range("zset", 0L, -1);
+        System.out.println(zset);
+    }
+
+    @Test
+    public void a() {
+        System.out.println(System.currentTimeMillis());
+        Long zset = redisTemplate.opsForZSet().zCard("zset");
+        System.out.println(zset);
+    }
 }
