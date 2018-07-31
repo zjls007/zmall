@@ -18,7 +18,8 @@ public class ZkClientUtil {
         if (zkClient == null) {
             // 172.16.1.109:2181
             // 192.168.99.100:2181
-            zkClient = new ZkClient("192.168.99.100:2181", 5000, 5000, new SerializableSerializer());
+            // 192.168.145.128:2181
+            zkClient = new ZkClient("192.168.145.128:2181", 5000, 5000, new SerializableSerializer());
         }
         return zkClient;
     }

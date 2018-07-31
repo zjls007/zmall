@@ -12,8 +12,7 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-//        ZkClientUtil.createNode("/a/b/b1", null, CreateMode.PERSISTENT_SEQUENTIAL);
-        ZkClientUtil.subscribeDataChanges("/a");
+        ZkClientUtil.createNode("/a", null, CreateMode.PERSISTENT);
     }
 
 }
