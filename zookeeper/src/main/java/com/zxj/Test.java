@@ -12,9 +12,8 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        String path = "/dubbo/com.zxj.service.ITaskNoteService";
-        List<String> children = ZkClientUtil.getChildren(path);
-        System.out.println(children);
+//        ZkClientUtil.createNode("/a/b/b1", null, CreateMode.PERSISTENT_SEQUENTIAL);
+        ZkClientUtil.subscribeDataChanges("/a");
     }
 
 }

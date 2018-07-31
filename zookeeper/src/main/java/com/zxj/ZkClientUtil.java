@@ -88,4 +88,30 @@ public class ZkClientUtil {
         return getZkClient().getChildren(path);
     }
 
+    /**
+     * 订阅子节点发生变化
+     * @param path
+     */
+    public static void subscribeChildChanges(String path) {
+        List<String> list = getZkClient().subscribeChildChanges(path, new ZkChildListener());
+        try {
+            Thread.sleep(50000000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 订阅节点数据发生变化（更改和删除）
+     * @param path
+     */
+    public static void subscribeDataChanges(String path) {
+        getZkClient().subscribeDataChanges(path, new ZkDataListener());
+        try {
+            Thread.sleep(50000000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
