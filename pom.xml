@@ -21,6 +21,7 @@
         <module>rabbitMQ</module>
         <module>sale-kill</module>
         <module>common</module>
+        <module>zookeeper</module>
     </modules>
 
     <properties>

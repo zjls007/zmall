@@ -8,4 +8,4 @@ dubbo:
     name: user-rpc-consumer
   registry:
     id: zookeeper
-    address: zookeeper://172.16.1.109:2181
+    address: zookeeper://192.168.99.100:2181
