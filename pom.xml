@@ -22,6 +22,8 @@
         <module>sale-kill</module>
         <module>common</module>
         <module>zookeeper</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-eureka-client</module>
     </modules>
 
     <properties>
@@ -93,6 +95,14 @@
                 <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>0.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
