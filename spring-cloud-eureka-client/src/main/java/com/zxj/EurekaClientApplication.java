@@ -20,11 +20,12 @@ public class EurekaClientApplication {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
 
-    @Value("${server.port}")
-    String port;
+    @Value("${env.name}")
+    String env;
+
     @RequestMapping("/")
     public String home() {
-        return "hello world from port " + port;
+        return env;
     }
 
 }
