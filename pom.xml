@@ -28,6 +28,8 @@
         <module>spring-cloud-eureka-server-peer1</module>
         <module>spring-cloud-eureka-server-peer2</module>
         <module>spring-cloud-eureka-server-peer3</module>
+        <module>spring-cloud-service-provider-user-cluster1</module>
+        <module>spring-cloud-service-provider-user-cluster2</module>
     </modules>
 
     <properties>
